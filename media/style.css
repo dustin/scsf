@@ -1,0 +1,45 @@
+body {
+	font-family: "Verdana", "Times New Roman", "Times", serif;
+}
+
+a {
+	color: #ccc;
+	background: #1c1c1c;
+	text-decoration: none;
+}
+
+div#navbar {
+	border-top: solid 3px white;
+	height: 2em;
+	float: right;
+}
+
+#navbar a:hover {
+	background: #161;
+}
+
+div#navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+div#navbar li {
+	text-align: center;
+	width: 120px;
+	height: 2em;
+	float: left;
+}
+
+div#navbar li a {
+	/* background: #444; */
+	background: #040;
+	width: 120px;
+	height: 2em;
+	display: block;
+	line-height: 2em;
+}
+
+div#content {
+	clear: both;
+}
