@@ -1,28 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-  Copyright (c) 2005  Dustin Sallings <dustin+html@spy.net>
-  -->
-<html>
-	<head>
-		<title>Welcome to Santa Clara Schools Foundation!</title>
-	</head>
+{% extends "base" %}
 
-	<body>
+{% block content %}
+	<p>
+		<h1>What We Do</h1>
+		We steal from the rich and give to the poor.
+	</p>
+	{% if schools %}
 		<p>
-			This is the Santa Clara Schools Foundation web site.
+			<h1>Schools We Cover</h1>
+				<ul>
+					{% for school in schools %}
+						<li>{{ school.name }} of {{ school.city }}</li>
+					{% endfor %}
+				</ul>
 		</p>
-		{% if schools %}
-			<p>
-				We cover the following schools:
-					<ul>
-						{% for school in schools %}
-							<li>{{ school.name }} of {{ school.city }}</li>
-						{% endfor %}
-					</ul>
-			</p>
-		{% endif %}
-	</body>
-</html>
-
+	{% endif %}
+{% endblock %}
