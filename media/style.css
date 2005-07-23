@@ -43,3 +43,15 @@ div#navbar li a {
 div#content {
 	clear: both;
 }
+
+h1 {
+	color: #040;
+}
+
+#content ul li {
+	padding-left: 15px;
+	margin-left: 0;
+	font-size: smaller;
+	list-style: none;
+	background: url(/media/images/bullet.gif) 3px .5em no-repeat;
+}
