@@ -5,9 +5,14 @@ body {
 }
 
 a {
-	color: #ddb;
-	background: inherit;
+	background: #ddb;
+	color: black;
 	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+	background: #467;
 }
 
 div#pagetop {
@@ -53,6 +58,11 @@ div#navbar {
 	font-size: smaller;
 }
 
+div#navbar a {
+	background: inherit;
+	color: #ddb;
+}
+
 #navbar a:hover {
 	border-bottom: solid #ddb 3px;
 }
@@ -80,7 +90,7 @@ div#content {
 	margin-left: 160px;
 }
 
-h1 {
+h1, h2, h3, h4 {
 	color: #467;
 }
 
