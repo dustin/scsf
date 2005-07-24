@@ -91,3 +91,13 @@ h1 {
 	list-style: none;
 	background: url(/media/images/bullet.gif) 3px .5em no-repeat;
 }
+
+#footer {
+	clear: both;
+	padding-top: 2px;
+	font-size: xx-small;
+	border-style: solid none none none;
+	border-width: 1px;
+	width: 100%;
+	text-align: center;
+}
