@@ -18,12 +18,8 @@ def index(request):
     })
     return HttpResponse(t.render(c))
 
-def programs(request):
-    t = template_loader.get_template('programs')
+def page(request, page):
+    t = template_loader.get_template(page)
     c = Context(request, { })
     return HttpResponse(t.render(c))
 
-def funding(request):
-    t = template_loader.get_template('funding')
-    c = Context(request, { })
-    return HttpResponse(t.render(c))
