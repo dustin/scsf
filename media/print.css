@@ -1,0 +1,13 @@
+/* Style for printing */
+
+div#pagetop {
+	background: white;
+}
+
+div#navbar {
+	display: none;
+}
+
+div#content {
+	margin-left: 2em;
+}
