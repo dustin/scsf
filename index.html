@@ -1,18 +1,14 @@
 {% extends "base" %}
 
 {% block content %}
-	<p>
-		<h1>What We Do</h1>
-		We steal from the rich and give to the poor.
-	</p>
+	<h1>What We Do</h1>
+	We steal from the rich and give to the poor.
 	{% if schools %}
-		<p>
-			<h1>Schools We Cover</h1>
-				<ul>
-					{% for school in schools %}
-						<li>{{ school.name }} of {{ school.city }}</li>
-					{% endfor %}
-				</ul>
-		</p>
+		<h1>Schools We Cover</h1>
+			<ul>
+				{% for school in schools %}
+					<li>{{ school.name }} of {{ school.city }}</li>
+				{% endfor %}
+			</ul>
 	{% endif %}
 {% endblock %}
