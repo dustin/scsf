@@ -1,5 +1,7 @@
 body {
 	font-family: "Verdana", "Times New Roman", "Times", serif;
+	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -9,22 +11,36 @@ a {
 }
 
 div#pagetop {
-	font-size: larger;
+	height: 105px;
+	border-bottom: 4px solid #467;
+	background: #ddb;
+	color: #467;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+div#toptext {
+	margin-left: 200px;
+	margin-right: 200px;
+	font-size: xx-large;
 	font-weight: bolder;
 	text-align: center;
-	height: 110px;
-	border-bottom: 2px solid #467;
+	position: relative;
+	top: 1em;
 }
 
 #lCornerLogo {
 	float: left;
 	top: 0px;
+	left: 2px;
+	position: absolute;
 }
 
 #rCornerLogo {
 	float: right;
 	top: 0px;
-	right: 0px;
+	right: 2px;
 	position: absolute;
 }
 
