@@ -22,3 +22,8 @@ def programs(request):
     t = template_loader.get_template('programs')
     c = Context(request, { })
     return HttpResponse(t.render(c))
+
+def funding(request):
+    t = template_loader.get_template('funding')
+    c = Context(request, { })
+    return HttpResponse(t.render(c))
