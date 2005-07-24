@@ -3,49 +3,69 @@ body {
 }
 
 a {
-	color: #ccc;
-	background: #1c1c1c;
+	color: #ddb;
+	background: inherit;
 	text-decoration: none;
 }
 
-div#navbar {
-	border-top: solid 3px white;
-	height: 2em;
+div#pagetop {
+	font-size: larger;
+	font-weight: bolder;
+	text-align: center;
+	height: 110px;
+	border-bottom: 2px solid #467;
+}
+
+#lCornerLogo {
+	float: left;
+	top: 0px;
+}
+
+#rCornerLogo {
 	float: right;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+}
+
+div#navbar {
+	color: #acf;
+	border-top: solid 3px white;
+	background: #467;
+	width: 150px;
+	float: left;
+	font-size: smaller;
 }
 
 #navbar a:hover {
-	background: #161;
+	border-bottom: solid #ddb 3px;
 }
 
 div#navbar ul {
-	margin: 0;
 	padding: 0;
+	margin: 2px;
 	list-style: none;
 }
 
-div#navbar li {
-	text-align: center;
-	width: 120px;
-	height: 2em;
-	float: left;
+div#navbar ul ul {
+	margin: 0 1em;
+	font-size: smaller;
 }
 
-div#navbar li a {
-	/* background: #444; */
-	background: #040;
-	width: 120px;
-	height: 2em;
-	display: block;
-	line-height: 2em;
+div#navbar li {
+	margin: 0 0 1em 0;
+}
+
+div#navbar ul > li > ul > li {
+	margin-bottom: 0;
 }
 
 div#content {
-	clear: both;
+	margin-left: 160px;
 }
 
 h1 {
-	color: #040;
+	color: #467;
 }
 
 #content ul li {
