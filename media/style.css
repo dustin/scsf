@@ -64,7 +64,7 @@ div#navbar a {
 }
 
 #navbar a:hover {
-	border-bottom: solid #ddb 3px;
+	text-decoration: underline;
 }
 
 div#navbar ul {
