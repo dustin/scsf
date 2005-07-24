@@ -1,14 +1,46 @@
 {% extends "base" %}
 
 {% block content %}
-	<h1>What We Do</h1>
-	We steal from the rich and give to the poor.
-	{% if schools %}
-		<h1>Schools We Cover</h1>
-			<ul>
-				{% for school in schools %}
-					<li>{{ school.name }} of {{ school.city }}</li>
-				{% endfor %}
-			</ul>
-	{% endif %}
+<h1>Who Are We?</h1>
+
+<p>
+The Santa Clara Schools Foundation is a non-profit, public benefit corporation
+formed in 1992 to fund innovative projects and programs proposed by teachers
+for the Santa Clara Unified School District.
+</p>
+
+<p>
+The foundation's fund-raising focus is on private sources from local
+corporations , to small businesses, community friends and Santa Clara Unified
+Alumni.
+</p>
+
+<p>
+Since its inception, this all volunteer organization has funded over $450,000
+of programs for our district schools.
+</p>
+
+<h1>Why?</h1>
+
+<p>
+In the last three years, Santa Clara Unified Schools have suffered more than
+$13 million in cuts. For the 2005-2006 school year, the district's budget
+will be $3.4 million less than it was last year. This is the equivalent of $250
+less per student.
+</p>
+
+<p>
+This budget shortfall is primarily a result of state funding cutbacks coupled
+with a continued decline in local commercial property tax revenues. This year's
+cuts include reducing Kindergarten from a full day to half day, decreasing the
+number of nurses and counselors in our schools.
+</p>
+
+<p>
+Other programs that were on the cut list but managed to survive (this year)
+were the elementary school music program, library assistance, maintaining small
+class sizes for third and ninth graders, and many more.
+</p>
+
+
 {% endblock %}
