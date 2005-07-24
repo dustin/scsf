@@ -17,3 +17,8 @@ def index(request):
         'schools': school_list,
     })
     return HttpResponse(t.render(c))
+
+def programs(request):
+    t = template_loader.get_template('programs')
+    c = Context(request, { })
+    return HttpResponse(t.render(c))
