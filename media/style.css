@@ -38,6 +38,8 @@ div#toptext {
 #lCornerLogo {
 	float: left;
 	top: 0px;
+	/* A little padding here since that image has text all the way against the
+	   left */
 	left: 2px;
 	position: absolute;
 }
@@ -45,7 +47,7 @@ div#toptext {
 #rCornerLogo {
 	float: right;
 	top: 0px;
-	right: 2px;
+	right: 0;
 	position: absolute;
 }
 
