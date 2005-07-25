@@ -141,3 +141,7 @@ fieldset.aligned label {
 	text-align: right;
 	padding-right: 1em;
 }
+
+.error {
+	color: red;
+}
