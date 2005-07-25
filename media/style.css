@@ -120,12 +120,23 @@ dt {
 }
 
 fieldset legend {
-	border: solid 1px black;
+	border: solid 1px #467;
+	background: #ddb;
+	color: #467;
+}
+
+fieldset {
+	border: solid 1px #467;
+}
+
+input, select {
+	color: #467;
 }
 
 label {
 	font-weight: bolder;
 	font-size: smaller;
+	color: #467;
 }
 
 fieldset.aligned {
