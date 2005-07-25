@@ -14,6 +14,8 @@ def new(request):
 
     if request.POST:
         new_data = request.POST.copy()
+        # Need to specify the default value here. 1 == Null (*shrug*)
+        new_data['accepted']='1'
         errors = manipulator.get_validation_errors(new_data)
 
         if not errors:
