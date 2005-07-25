@@ -51,8 +51,6 @@ class GrantRequest(meta.Model):
         meta.NullBooleanField('accepted'),
         meta.FloatField('amt_granted', max_digits=7, decimal_places=2,
             blank=True, null=True),
-        meta.DateTimeField('date_granted', 'date granted',
-            null=True),
         meta.TextField('note', blank=True, null=True),
     )
 
