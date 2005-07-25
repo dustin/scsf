@@ -14,6 +14,8 @@ class School(meta.Model):
         meta.CharField('fax', maxlength=64),
     )
 
+    ordering = ['name']
+
     admin = meta.Admin()
 
     def __repr__(self):
@@ -25,6 +27,8 @@ class Grade(meta.Model):
     )
 
     admin = meta.Admin()
+
+    ordering = ['id']
 
     def __repr__(self):
         return self.name
