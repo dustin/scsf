@@ -1,7 +1,12 @@
 /* Style for printing */
 
 div#pagetop {
+	font-size: smaller;
 	background: white;
+}
+
+div#toptext {
+	top: 0;
 }
 
 div#navbar {
