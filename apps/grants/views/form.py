@@ -28,5 +28,5 @@ def new(request):
 
     form = formfields.FormWrapper(manipulator, new_data, errors)
     t = template_loader.get_template('grantform')
-    c = Context(request, { 'form': form })
+    c = Context(request, { 'form': form, 'errors': errors })
     return HttpResponse(t.render(c))

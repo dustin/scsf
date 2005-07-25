@@ -47,6 +47,13 @@ class GrantRequest(meta.Model):
         meta.FloatField('amt_raised', max_digits=7, decimal_places=2,
             blank=True, null=True),
         meta.TextField('raise_description', blank=True, null=True),
+        # Null means not processed
+        meta.NullBooleanField('accepted'),
+        meta.FloatField('amt_granted', max_digits=7, decimal_places=2,
+            blank=True, null=True),
+        meta.DateTimeField('date_granted', 'date granted',
+            null=True),
+        meta.TextField('note', blank=True, null=True),
     )
 
     admin = meta.Admin()
