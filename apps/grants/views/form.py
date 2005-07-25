@@ -4,19 +4,15 @@
 Copyright (c) 2005  Dustin Sallings <dustin@spy.net>
 """
 
-from django.core import template_loader
+from django.core import template_loader, formfields
 from django.core.extensions import DjangoContext as Context
 from django.models.grants import schools, grades, grantrequests
 from django.utils.httpwrappers import HttpResponse
 
 def show(request):
-    school_list = schools.get_list(order_by=['name'])
-    grade_list = grades.get_list(order_by=['id'])
+    form = formfields.FormWrapper(grantrequests.AddManipulator(), {}, {})
     t = template_loader.get_template('grantform')
-    c = Context(request, {
-        'schools': school_list,
-        'grades': grade_list,
-    })
+    c = Context(request, { 'form': form })
     return HttpResponse(t.render(c))
 
 def new(request):
