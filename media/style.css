@@ -117,3 +117,26 @@ h1, h2, h3, h4 {
 dt {
 	font-weight: bold;
 }
+
+fieldset legend {
+	border: solid 1px black;
+}
+
+label {
+	font-weight: bolder;
+	font-size: smaller;
+}
+
+fieldset.aligned {
+	margin-bottom: 1em;
+}
+
+fieldset.aligned div {
+	margin-bottom: 1em;
+}
+
+fieldset.aligned label {
+	float: left;
+	clear: left;
+	width: 120px;
+}
