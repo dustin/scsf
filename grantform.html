@@ -5,42 +5,33 @@
 
 <form method="post" action="/grant/new/">
 
+
 <fieldset class="aligned" id="requestor">
 	<legend>Requestor Info</legend>
 
 	<div>
-	<label for="reqname">Your Name</label>
-		<input id="reqname" name="reqname"/>
+	<label for="id_requestor_name">Your Name</label>
+		{{ form.requestor_name }}
 	</div>
 
 	<div>
-	<label for="reqemail">Your Email Address</label>
-		<input id="reqemail" name="reqemail"/>
+	<label for="id_requestor_email">Your Email Address</label>
+		{{ form.requestor_email }}
 	</div>
 
 	<div>
-	<label for="school">Your School</label>
-		<select id="school" name="school">
-			<option value="-1">-- Select Your School --</option>
-			{% for school in schools %}
-				<option value="{{ school.id }}">{{ school.name }}</option>
-			{% endfor %}
-		</select>
+	<label for="id_school_id">Your School</label>
+		{{ form.school_id }}
 	</div>
 
 	<div>
-	<label for="grade">Grade</label>
-		<select id="grade" name="grade">
-			<option value="-1">-- Select Your Grade --</option>
-			{% for grade in grades %}
-				<option value="{{ grade.id }}">{{ grade.name }}</option>
-			{% endfor %}
-		</select>
+	<label for="id_grade_id">Grade</label>
+		{{ form.grade_id }}
 	</div>
 
 	<div>
-	<label for="subject">Subject</label>
-		<input id="subject" name="subject"/>
+	<label for="id_subject">Subject</label>
+		{{ form.subject }}
 	</div>
 </fieldset>
 
@@ -48,13 +39,13 @@
 	<legend>Request Info</legend>
 
 	<div>
-	<label for="proposal">Your proposal</label>
-		<textarea id="proposal" name="proposal" cols="60" rows="30"></textarea>
+	<label for="id_proposal">Your proposal</label>
+		{{ form.proposal }}
 	</div>
 
 	<div>
-	<label for="amount">Amount Requested</label>
-		$<input id="amount" name="amount" value="0.00"/>
+	<label for="id_amt_requested">Amount Requested</label>
+		{{ form.amt_requested }}
 	</div>
 
 </fieldset>
@@ -63,13 +54,13 @@
 	<legend>Raised Elsewhere</legend>
 	
 	<div>
-	<label for="raisedAmount">Amount Raised</label>
-		$<input id="raisedAmount" name="raisedAmount" value="0.00"/>
+	<label for="id_amt_raised">Amount Raised</label>
+		{{ form.amt_raised }}
 	</div>
 
 	<div>
-	<label for="raiseDescr">How Was This Raised?</label>
-		<textarea id="raiseDescr" name="raiseDescr" cols="60" rows="30"></textarea>
+	<label for="id_raise_description">How Was This Raised?</label>
+		{{ form.raise_description }}
 	</div>
 
 </fieldset>
