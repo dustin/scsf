@@ -8,13 +8,14 @@ Copyright (c) 2005  Dustin Sallings <dustin@spy.net>
 from django.core import template_loader
 from django.core.extensions import DjangoContext as Context
 from django.models.grants import schools
+from django.models.scholarships import scholarships
 from django.utils.httpwrappers import HttpResponse
 
-def index(request):
-    school_list = schools.get_list(order_by=['name'])
-    t = template_loader.get_template('index')
+def programs(request):
+    s = scholarships.get_list(order_by=['-year'])
+    t = template_loader.get_template('programs')
     c = Context(request, {
-        'schools': school_list,
+        'scholarships': s,
     })
     return HttpResponse(t.render(c))
 
@@ -22,4 +23,3 @@ def page(request, page):
     t = template_loader.get_template(page)
     c = Context(request, { })
     return HttpResponse(t.render(c))
-
