@@ -9,13 +9,24 @@ from django.core.extensions import DjangoContext as Context
 from django.models.grants import schools, grades, grantrequests
 from django.utils.httpwrappers import HttpResponse
 
-def show(request):
-    form = formfields.FormWrapper(grantrequests.AddManipulator(), {}, {})
+def new(request):
+    manipulator = grantrequests.AddManipulator()
+
+    if request.POST:
+        new_data = request.POST.copy()
+        errors = manipulator.get_validation_errors(new_data)
+
+        if not errors:
+            manipulator.do_html2python(new_data)
+            new_place = manipulator.save(new_data)
+
+            t = template_loader.get_template('grantsaved')
+            c = Context(request, {})
+            return HttpResponse(t.render(c))
+    else:
+        errors = new_data = {}
+
+    form = formfields.FormWrapper(manipulator, new_data, errors)
     t = template_loader.get_template('grantform')
     c = Context(request, { 'form': form })
-    return HttpResponse(t.render(c))
-
-def new(request):
-    t = template_loader.get_template('grantsaved')
-    c = Context(request, {})
     return HttpResponse(t.render(c))
