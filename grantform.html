@@ -12,7 +12,9 @@
 	<label for="id_requestor_name">Your Name</label>
 		{{ form.requestor_name }}
 		{% if form.requestor_name.errors %}
-			*** {{ form.requestor_name.errors|join:", " }}
+			<span class="error">
+				*** {{ form.requestor_name.errors|join:", " }}
+			</span>
 		{% endif %}
 	</div>
 
@@ -20,7 +22,9 @@
 	<label for="id_requestor_email">Your Email Address</label>
 		{{ form.requestor_email }}
 		{% if form.requestor_email.errors %}
-			*** {{ form.requestor_email.errors|join:", " }}
+			<span class="error">
+				*** {{ form.requestor_email.errors|join:", " }}
+			</span>
 		{% endif %}
 	</div>
 
@@ -28,7 +32,9 @@
 	<label for="id_school_id">Your School</label>
 		{{ form.school_id }}
 		{% if form.school_id.errors %}
-			*** {{ form.school_id.errors|join:", " }}
+			<span class="error">
+				*** {{ form.school_id.errors|join:", " }}
+			</span>
 		{% endif %}
 	</div>
 
@@ -36,7 +42,9 @@
 	<label for="id_grade_id">Grade</label>
 		{{ form.grade_id }}
 		{% if form.grade_id.errors %}
-			*** {{ form.grade_id.errors|join:", " }}
+			<span class="error">
+				*** {{ form.grade_id.errors|join:", " }}
+			</span>
 		{% endif %}
 	</div>
 
@@ -44,7 +52,9 @@
 	<label for="id_subject">Subject</label>
 		{{ form.subject }}
 		{% if form.subject.errors %}
-			*** {{ form.subject.errors|join:", " }}
+			<span class="error">
+				*** {{ form.subject.errors|join:", " }}
+			</span>
 		{% endif %}
 	</div>
 </fieldset>
@@ -56,7 +66,9 @@
 	<label for="id_proposal">Your proposal</label>
 		{{ form.proposal }}
 		{% if form.proposal.errors %}
-			*** {{ form.proposal.errors|join:", " }}
+			<span class="error">
+				*** {{ form.proposal.errors|join:", " }}
+			</span>
 		{% endif %}
 	</div>
 
@@ -64,7 +76,9 @@
 	<label for="id_amt_requested">Amount Requested</label>
 		{{ form.amt_requested }}
 		{% if form.amt_requested.errors %}
-			*** {{ form.amt_requested.errors|join:", " }}
+			<span class="error">
+				*** {{ form.amt_requested.errors|join:", " }}
+			</span>
 		{% endif %}
 	</div>
 
@@ -77,7 +91,9 @@
 	<label for="id_amt_raised">Amount Raised</label>
 		{{ form.amt_raised }}
 		{% if form.amt_raised.errors %}
-			*** {{ form.amt_raised.errors|join:", " }}
+			<span class="error">
+				*** {{ form.amt_raised.errors|join:", " }}
+			</span>
 		{% endif %}
 	</div>
 
@@ -85,7 +101,9 @@
 	<label for="id_raise_description">How Was This Raised?</label>
 		{{ form.raise_description }}
 		{% if form.raise_description.errors %}
-			*** {{ form.raise_description.errors|join:", " }}
+			<span class="error">
+				*** {{ form.raise_description.errors|join:", " }}
+			</span>
 		{% endif %}
 	</div>
 
