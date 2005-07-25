@@ -106,6 +106,7 @@ h1, h2, h3, h4 {
 
 #footer {
 	clear: both;
+	margin-top: 1em;
 	padding-top: 2px;
 	font-size: xx-small;
 	border-style: solid none none none;
