@@ -1,0 +1,83 @@
+{% extends "base" %}
+{% block content %}
+
+<h1>Request a Grant</h1>
+
+<form method="post" action="/grant/new/">
+
+<fieldset class="aligned" id="requestor">
+	<legend>Requestor Info</legend>
+
+	<div>
+	<label for="reqname">Your Name</label>
+		<input id="reqname" name="reqname"/>
+	</div>
+
+	<div>
+	<label for="reqemail">Your Email Address</label>
+		<input id="reqemail" name="reqemail"/>
+	</div>
+
+	<div>
+	<label for="school">Your School</label>
+		<select id="school" name="school">
+			<option value="-1">-- Select Your School --</option>
+			{% for school in schools %}
+				<option value="{{ school.id }}">{{ school.name }}</option>
+			{% endfor %}
+		</select>
+	</div>
+
+	<div>
+	<label for="grade">Grade</label>
+		<select id="grade" name="grade">
+			<option value="-1">-- Select Your Grade --</option>
+			{% for grade in grades %}
+				<option value="{{ grade.id }}">{{ grade.name }}</option>
+			{% endfor %}
+		</select>
+	</div>
+
+	<div>
+	<label for="subject">Subject</label>
+		<input id="subject" name="subject"/>
+	</div>
+</fieldset>
+
+<fieldset class="aligned" id="request">
+	<legend>Request Info</legend>
+
+	<div>
+	<label for="proposal">Your proposal</label>
+		<textarea id="proposal" name="proposal" cols="60" rows="30"></textarea>
+	</div>
+
+	<div>
+	<label for="amount">Amount Requested</label>
+		$<input id="amount" name="amount" value="0.00"/>
+	</div>
+
+</fieldset>
+
+<fieldset class="aligned" id="raised">
+	<legend>Raised Elsewhere</legend>
+	
+	<div>
+	<label for="raisedAmount">Amount Raised</label>
+		$<input id="raisedAmount" name="raisedAmount" value="0.00"/>
+	</div>
+
+	<div>
+	<label for="raiseDescr">How Was This Raised?</label>
+		<textarea id="raiseDescr" name="raiseDescr" cols="60" rows="30"></textarea>
+	</div>
+
+</fieldset>
+
+<div>
+	<input type="submit" value="Request"/>
+</div>
+
+</form>
+
+{% endblock %}
