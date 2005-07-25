@@ -52,4 +52,4 @@ class GrantRequest(meta.Model):
     admin = meta.Admin()
 
     def __repr__(self):
-        return `self.req_datq` + '_' + self.requestor_name
+        return self.req_date.isoformat() + '_' + self.requestor_name
