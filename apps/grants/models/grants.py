@@ -54,7 +54,12 @@ class GrantRequest(meta.Model):
         meta.TextField('note', blank=True, null=True),
     )
 
-    admin = meta.Admin()
+    admin = meta.Admin(
+        search_fields=('requestor_name', 'proposal'),
+        list_display=('req_date', 'requestor_name',
+            'amt_requested', 'amt_granted', 'accepted', 'get_school'),
+        list_filter=('req_date', 'accepted'),
+        )
 
     def __repr__(self):
         return self.req_date.isoformat() + '_' + self.requestor_name
