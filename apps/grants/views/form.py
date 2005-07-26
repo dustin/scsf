@@ -6,7 +6,7 @@ Copyright (c) 2005  Dustin Sallings <dustin@spy.net>
 
 from django.core import template_loader, formfields
 from django.core.extensions import DjangoContext as Context
-from django.models.grants import schools, grades, grantrequests
+from django.models.grants import grantrequests
 from django.utils.httpwrappers import HttpResponse
 
 def new(request):

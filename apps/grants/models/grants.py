@@ -1,37 +1,7 @@
 from django.core import meta
+from scsf.apps.general.models.general import School, Grade
 
 # Create your models here.
-
-class School(meta.Model):
-    fields = (
-        meta.CharField('name', maxlength=64),
-        meta.CharField('address1', maxlength=64),
-        meta.CharField('address2', maxlength=64, blank=True, null=True),
-        meta.CharField('city', maxlength=64),
-        meta.CharField('state', maxlength=64),
-        meta.CharField('zip', maxlength=64),
-        meta.CharField('phone', maxlength=64),
-        meta.CharField('fax', maxlength=64),
-    )
-
-    ordering = ['name']
-
-    admin = meta.Admin()
-
-    def __repr__(self):
-        return self.name
-
-class Grade(meta.Model):
-    fields = (
-        meta.CharField('name', maxlength=32),
-    )
-
-    admin = meta.Admin()
-
-    ordering = ['id']
-
-    def __repr__(self):
-        return self.name
 
 class GrantRequest(meta.Model):
 
@@ -61,7 +31,7 @@ class GrantRequest(meta.Model):
         list_filter=('req_date', 'accepted'),
         fields=(
             ('Request Information',
-                {'fields': ('req_date', 'requestor_name',
+                {'fields': ('requestor_name',
                     'requestor_email', 'school_id', 'grade_id', 'subject',
                     'proposal', 'amt_requested', 'amt_raised',
                     'raise_description')

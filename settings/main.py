@@ -37,6 +37,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'scsf.apps.general',
     'scsf.apps.grants',
     'scsf.apps.scholarships',
 )

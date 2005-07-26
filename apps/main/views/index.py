@@ -7,7 +7,7 @@ Copyright (c) 2005  Dustin Sallings <dustin@spy.net>
 
 from django.core import template_loader
 from django.core.extensions import DjangoContext as Context
-from django.models.grants import schools
+from django.models.general import schools
 from django.models.scholarships import scholarships
 from django.utils.httpwrappers import HttpResponse
 

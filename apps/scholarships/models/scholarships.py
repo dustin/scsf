@@ -1,5 +1,5 @@
 from django.core import meta
-from scsf.apps.grants.models.grants import School
+from scsf.apps.general.models.general import School
 
 # Create your models here.
 
