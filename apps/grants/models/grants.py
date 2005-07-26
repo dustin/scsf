@@ -59,6 +59,16 @@ class GrantRequest(meta.Model):
         list_display=('req_date', 'requestor_name',
             'amt_requested', 'amt_granted', 'accepted', 'get_school'),
         list_filter=('req_date', 'accepted'),
+        fields=(
+            ('Request Information',
+                {'fields': ('req_date', 'requestor_name',
+                    'requestor_email', 'school_id', 'grade_id', 'subject',
+                    'proposal', 'amt_requested', 'amt_raised',
+                    'raise_description')
+                }),
+            ('Administrative Options',
+                { 'fields': ('accepted', 'amt_granted', 'note')}
+            )),
         )
 
     def __repr__(self):
