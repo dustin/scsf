@@ -96,12 +96,9 @@ h1, h2, h3, h4 {
 	color: #467;
 }
 
-#content ul li {
-	padding-left: 15px;
-	margin-left: 0;
+#content ul {
 	font-size: smaller;
-	list-style: none;
-	background: url(/media/images/bullet.gif) 3px .5em no-repeat;
+	list-style-image: url(/media/images/bullet.gif);
 }
 
 #footer {
