@@ -16,3 +16,7 @@ div#navbar {
 div#content {
 	margin-left: 2em;
 }
+
+#content ul {
+	list-style: disc;
+}
