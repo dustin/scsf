@@ -33,7 +33,7 @@ ROOT_URLCONF = 'scsf.settings.urls.main'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates".
-    '/data/web/django/templates/sfsc',
+    '/data/web/django/templates/scsf',
 )
 
 INSTALLED_APPS = (
