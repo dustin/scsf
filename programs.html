@@ -18,13 +18,11 @@ gave about six scholarships totaling $9,000.
 {% if scholarships %}
 <h2>Congratulations to Past Winners</h2>
 
-<p>
 <ul>
 {% for s in scholarships %}
 	<li>{{ s.name }} from {{ s.get_school }} in {{ s.year }}</li>
 {% endfor %}
 </ul>
-</p>
 {% endif %}
 
 <a name="grants"></a>
