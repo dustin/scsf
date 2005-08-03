@@ -1,5 +1,11 @@
 /* Style for printing */
 
+a {
+	background: white;
+	color: black;
+	text-decoration: none;
+}
+
 div#pagetop {
 	font-size: smaller;
 	background: white;
