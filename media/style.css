@@ -95,6 +95,14 @@ h1, h2, h3, h4 {
 	color: #467;
 }
 
+h1 {
+	font-size x-large;
+}
+
+h2 {
+	font-size large;
+}
+
 #content ul {
 	font-size: smaller;
 	list-style-image: url(/media/images/applenb.png);
