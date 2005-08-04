@@ -41,4 +41,5 @@ INSTALLED_APPS = (
     'scsf.apps.grants',
     'scsf.apps.scholarships',
     'scsf.apps.volunteers',
+    'scsf.apps.donations',
 )
