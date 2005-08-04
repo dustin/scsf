@@ -109,6 +109,10 @@ h2 {
 	list-style-image: url(/media/images/applenb.png);
 }
 
+#content dl, ol {
+	font-size: smaller;
+}
+
 #footer {
 	clear: both;
 	margin-top: 1em;
