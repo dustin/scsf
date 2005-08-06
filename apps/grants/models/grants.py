@@ -13,6 +13,9 @@ class GrantRequest(meta.Model):
         meta.ForeignKey(Grade),
         meta.CharField('subject', maxlength=64),
         meta.TextField('proposal'),
+        # Number of children that will be benefitted
+        meta.PositiveIntegerField('benefits'),
+        meta.BooleanField('principal_notified'),
         meta.FloatField('amt_requested', max_digits=7, decimal_places=2),
         meta.FloatField('amt_raised', max_digits=7, decimal_places=2,
             blank=True, null=True),
@@ -34,7 +37,7 @@ class GrantRequest(meta.Model):
                 {'fields': ('requestor_name',
                     'requestor_email', 'school_id', 'grade_id', 'subject',
                     'proposal', 'amt_requested', 'amt_raised',
-                    'raise_description')
+                    'raise_description', 'benefits', 'principal_notified')
                 }),
             ('Administrative Options',
                 { 'fields': ('accepted', 'amt_granted', 'note')}
