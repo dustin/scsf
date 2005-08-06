@@ -24,11 +24,12 @@ class School(meta.Model):
 class Grade(meta.Model):
     fields = (
         meta.CharField('name', maxlength=32),
+        meta.IntegerField('seq'),
     )
 
     admin = meta.Admin()
 
-    ordering = ['id']
+    ordering = ['seq', 'id']
 
     def __repr__(self):
         return self.name
