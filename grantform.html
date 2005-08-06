@@ -95,6 +95,26 @@
 		{% endif %}
 	</div>
 
+	<div>
+	<label for="id_benefits">Children Affected</label>
+		{{ form.benefits }}
+		{% if form.benefits.errors %}
+			<span class="error">
+				*** {{ form.benefits.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_principal_notified">Was the Principal Notified?</label>
+		{{ form.principal_notified }}
+		{% if form.principal_notified.errors %}
+			<span class="error">
+				*** {{ form.principal_notified.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
 </fieldset>
 
 <fieldset class="aligned" id="raised">
