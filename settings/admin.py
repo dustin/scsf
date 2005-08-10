@@ -3,6 +3,7 @@
 from main import *
 
 TEMPLATE_DIRS = (
+    '/data/web/django/templates/scsf-admin/',
     '/usr/local/lib/python2.4/site-packages/django-1.0.0-py2.4.egg/django/conf/admin_templates',
     # Put strings here, like "/home/html/django_templates".
 )
