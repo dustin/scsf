@@ -9,6 +9,7 @@ TEMPLATE_DIRS = (
 )
 ROOT_URLCONF = 'scsf.settings.urls.admin'
 MIDDLEWARE_CLASSES = (
+    'django.middleware.sessions.SessionMiddleware',
     'django.middleware.admin.AdminUserRequired',
     'django.middleware.common.CommonMiddleware',
 )
