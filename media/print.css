@@ -4,22 +4,33 @@ a {
 	background: white;
 	color: black;
 	text-decoration: none;
+	border: none;
 }
 
-div#pagetop {
+acronym {
+	text-decoration: none;
+	border: none;
+}
+
+acronym:after {
+	font-size: x-small;
+	content: " [" attr(title) "] ";
+}
+
+#pagetop {
 	font-size: smaller;
 	background: white;
 }
 
-div#toptext {
+#toptext {
 	top: 0;
 }
 
-div#navbar {
+#navbar {
 	display: none;
 }
 
-div#content {
+#content {
 	margin-left: 2em;
 }
 
