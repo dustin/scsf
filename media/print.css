@@ -1,13 +1,8 @@
 /* Style for printing */
 
-a {
+a, a:visited, acronym {
 	background: white;
 	color: black;
-	text-decoration: none;
-	border: none;
-}
-
-acronym {
 	text-decoration: none;
 	border: none;
 }
