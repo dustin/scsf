@@ -76,11 +76,11 @@ a:hover {
 	color: #467;
 	border: none;
 	text-decoration: none;
+	font-weight: bold;
 }
 
-#navbar a:visited:after {
-	content: " \221A";
-	color: white;
+#navbar a:visited {
+	font-weight: normal;
 }
 
 #navbar a:hover {
