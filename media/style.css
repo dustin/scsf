@@ -21,8 +21,8 @@ a:visited {
 }
 
 a:hover {
-	color: white;
-	background: #467;
+	color: #467;
+	background: #ddb;
 }
 
 #pagetop {
