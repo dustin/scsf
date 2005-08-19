@@ -5,8 +5,19 @@ body {
 }
 
 a {
-	background: #ddb;
-	color: black;
+	color: #467;
+	padding-right: 2px;
+	/*
+	border-bottom: dotted 1px blue;
+	border-right: dotted 1px blue;
+	*/
+	border-bottom: solid 1px;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #79a;
+	text-decoration: none;
 }
 
 a:hover {
@@ -14,9 +25,9 @@ a:hover {
 	background: #467;
 }
 
-div#pagetop {
+#pagetop {
 	height: 105px;
-	border-bottom: 4px solid #467;
+	border-bottom: 2px solid #467;
 	background: #ddb;
 	color: #467;
 	margin: 0px;
@@ -24,7 +35,7 @@ div#pagetop {
 	overflow: hidden;
 }
 
-div#toptext {
+#toptext {
 	margin-left: 200px;
 	margin-right: 200px;
 	font-size: x-large;
@@ -50,44 +61,52 @@ div#toptext {
 	position: absolute;
 }
 
-div#navbar {
-	color: #acf;
-	border-top: solid 3px white;
-	background: #467;
+#navbar {
+	color: #467;
+	background: #ddb;
 	width: 150px;
 	float: left;
 	font-size: smaller;
+	border-right: solid 1px;
+	border-bottom: solid 1px;
 }
 
-div#navbar a {
-	background: #467;
-	color: #ddb;
+#navbar a {
+	background: #ddb;
+	color: #467;
+	border: none;
+	text-decoration: none;
+}
+
+#navbar a:visited:after {
+	content: " \221A";
+	color: white;
 }
 
 #navbar a:hover {
 	text-decoration: underline;
 }
 
-div#navbar ul {
+#navbar ul {
 	padding: 0;
 	margin: 2px;
 	list-style: none;
 }
 
-div#navbar ul ul {
+#navbar ul ul {
 	margin: 0 1em;
 	font-size: smaller;
 }
 
-div#navbar li {
+#navbar li {
 	margin: 0 0 1em 0;
 }
 
-div#navbar ul > li > ul > li {
+#navbar ul > li > ul > li {
 	margin-bottom: 0;
 }
 
-div#content {
+#content {
 	margin-left: 160px;
 	margin-right: 1em;
 }
