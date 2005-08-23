@@ -17,4 +17,6 @@ urlpatterns = patterns('',
 
     (r'^programs/', 'scsf.apps.main.views.index.programs'),
     (r'^page/(?P<page>[A-z]+)', 'scsf.apps.main.views.index.page'),
+
+    (r'^phoneathon/', include('scsf.apps.phoneathon.urls.phoneathon')),
 )
