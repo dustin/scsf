@@ -8,6 +8,11 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
+CACHE_MIDDLEWARE_GZIP = True
+CACHE_MIDDLEWARE_KEY_PREFIX = "scsf"
+CACHE_MIDDLEWARE_SECONDS = 300
+
 LANGUAGE_CODE = 'en-us'
 
 DATABASE_ENGINE = 'postgresql' # 'postgresql', 'mysql', or 'sqlite3'.
@@ -21,6 +26,11 @@ SITE_ID = 1
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = ''
+
+MIDDLEWARE_CLASSES = (
+    'django.middleware.common.CommonMiddleware',
+    "django.middleware.cache.CacheMiddleware",
+)
 
 # URL that handles the media served from MEDIA_ROOT.
 # Example: "http://media.lawrence.com"
