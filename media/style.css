@@ -182,6 +182,11 @@ fieldset.aligned label {
 	padding-right: 1em;
 }
 
+fieldset.aligned ul {
+	margin-left: 220px;
+	padding: 0;
+}
+
 .error {
 	color: red;
 }
