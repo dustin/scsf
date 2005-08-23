@@ -6,7 +6,11 @@
   -->
 <html lang="en">
 	<head>
-		<title>{% block title%}{% endblock %} - Santa Clara Schools Foundation</title>
+		<title>
+			{% block fulltitle %}
+				{% block title%}{% endblock %} - Santa Clara Schools Foundation
+			{% endblock %}
+		</title>
 		<link rel="stylesheet" type="text/css" title="Default"
 			href="/media/style.css" />
 		<link rel="stylesheet" type="text/css" media="print"
