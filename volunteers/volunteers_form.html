@@ -83,11 +83,11 @@
 	</div>
 
 	<div>
-	<label for="id_zip">Zip Code</label>
-		{{ form.zip }}
-		{% if form.zip.errors %}
+	<label for="id_zipcode">Zip Code</label>
+		{{ form.zipcode }}
+		{% if form.zipcode.errors %}
 			<span class="error">
-				*** {{ form.zip.errors|join:", " }}
+				*** {{ form.zipcode.errors|join:", " }}
 			</span>
 		{% endif %}
 	</div>

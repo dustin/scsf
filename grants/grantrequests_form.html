@@ -44,20 +44,20 @@
 
 	<div>
 	<label for="id_school_id">Your School</label>
-		{{ form.school_id }}
-		{% if form.school_id.errors %}
+		{{ form.school }}
+		{% if form.school.errors %}
 			<span class="error">
-				*** {{ form.school_id.errors|join:", " }}
+				*** {{ form.school.errors|join:", " }}
 			</span>
 		{% endif %}
 	</div>
 
 	<div>
-	<label for="id_grade_id">Grade</label>
-		{{ form.grade_id }}
-		{% if form.grade_id.errors %}
+	<label for="id_grade">Grade</label>
+		{{ form.grade }}
+		{% if form.grade.errors %}
 			<span class="error">
-				*** {{ form.grade_id.errors|join:", " }}
+				*** {{ form.grade.errors|join:", " }}
 			</span>
 		{% endif %}
 	</div>

@@ -68,21 +68,21 @@
 	</div>
 
 	<div>
-	<label for="id_zip">Zip Code</label>
-		{{ form.zip }}
-		{% if form.zip.errors %}
+	<label for="id_zipcode">Zip Code</label>
+		{{ form.zipcode }}
+		{% if form.zipcode.errors %}
 			<span class="error">
-				*** {{ form.zip.errors|join:", " }}
+				*** {{ form.zipcode.errors|join:", " }}
 			</span>
 		{% endif %}
 	</div>
 
 	<div>
-		<label for="id_school_id">Your School</label>
-			{{ form.school_id }}
-				{% if form.school_id.errors %}
+		<label for="id_school">Your School</label>
+			{{ form.school }}
+				{% if form.schoolid.errors %}
 					<span class="error">
-					*** {{ form.school_id.errors|join:", " }}
+					*** {{ form.school.errors|join:", " }}
 				</span>
 			{% endif %}
 	</div>
@@ -95,15 +95,15 @@
 
 
 	<label for="whentohelp">When Can You Help?
-		{% if form.whentohelps.errors %}
+		{% if form.whentohelp.errors %}
 			<br/><span class="error">Please select at least one time slot.</span>
 		{% endif %}
 	</label>
 
-	<ul style="list-style: none;" id="whentohelps">
-		{% for choice in form.manipulator.whentohelps.choices %}
+	<ul style="list-style: none;" id="whentohelp">
+		{% for choice in form.manipulator.whentohelp.choices %}
 			<li>
-				<input type="checkbox" name="whentohelps" value="{{ choice.0 }}"/>
+				<input type="checkbox" name="whentohelp" value="{{ choice.0 }}"/>
 				{{ choice.1 }}
 			</li>
 		{% endfor %}
