@@ -3,33 +3,31 @@ from django.core import meta
 # Create your models here.
 
 class School(meta.Model):
-    fields = (
-        meta.CharField('name', maxlength=64),
-        meta.CharField('address1', maxlength=64),
-        meta.CharField('address2', maxlength=64, blank=True, null=True),
-        meta.CharField('city', maxlength=64),
-        meta.CharField('state', maxlength=64),
-        meta.CharField('zip', maxlength=64),
-        meta.CharField('phone', maxlength=64),
-        meta.CharField('fax', maxlength=64),
-    )
+    name=meta.CharField(maxlength=64)
+    address1=meta.CharField(maxlength=64)
+    address2=meta.CharField(maxlength=64, blank=True, null=True)
+    city=meta.CharField(maxlength=64)
+    state=meta.CharField(maxlength=64)
+    zip=meta.CharField(maxlength=64)
+    phone=meta.CharField(maxlength=64)
+    fax=meta.CharField(maxlength=64)
 
-    ordering = ['name']
+    class META:
+        ordering = ['name']
 
-    admin = meta.Admin()
+        admin = meta.Admin()
 
     def __repr__(self):
         return self.name
 
 class Grade(meta.Model):
-    fields = (
-        meta.CharField('name', maxlength=32),
-        meta.IntegerField('seq'),
-    )
+    name=meta.CharField(maxlength=32)
+    seq=meta.IntegerField()
 
-    admin = meta.Admin()
+    class META:
+        admin = meta.Admin()
 
-    ordering = ['seq', 'id']
+        ordering = ['seq', 'id']
 
     def __repr__(self):
         return self.name

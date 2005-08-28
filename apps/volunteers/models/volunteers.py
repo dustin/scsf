@@ -4,18 +4,17 @@ from django.core import meta
 
 class Volunteer(meta.Model):
 
-    fields = (
-        meta.CharField('name', maxlength=128),
-        meta.CharField('address1', maxlength=64),
-        meta.CharField('address2', maxlength=64, blank=True, null=True),
-        meta.CharField('city', maxlength=64),
-        meta.PositiveIntegerField('zip'),
-        meta.EmailField('email'),
-        meta.PhoneNumberField('phone'),
-        meta.TextField('info', blank=True, null=True),
-    )
+    name=meta.CharField(maxlength=128)
+    address1=meta.CharField(maxlength=64)
+    address2=meta.CharField(maxlength=64, blank=True, null=True)
+    city=meta.CharField(maxlength=64)
+    zipcode=meta.PositiveIntegerField()
+    email=meta.EmailField()
+    phone=meta.PhoneNumberField()
+    info=meta.TextField(blank=True, null=True)
 
-    admin = meta.Admin()
+    class META:
+        admin = meta.Admin()
 
     def __repr__(self):
         return self.name + " of " + self.city

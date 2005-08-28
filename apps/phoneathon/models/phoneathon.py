@@ -5,39 +5,37 @@ from scsf.apps.general.models.general import School
 
 class WhenToHelp(meta.Model):
 
-    fields = (
-        meta.CharField('name', maxlength=64),
-    )
+    name=meta.CharField(maxlength=64)
 
-    admin = meta.Admin()
+    class META:
+        admin = meta.Admin()
 
-    verbose_name_plural = "When to Help"
+        verbose_name_plural = "When to Help"
 
-    ordering = ['id']
+        ordering = ['id']
 
     def __repr__(self):
         return self.name
 
 class PhoneVolunteer(meta.Model):
 
-    fields = (
-        meta.DateTimeField('timestamp', 'date added', auto_now_add=1),
-        meta.CharField('name', maxlength=128),
-        meta.CharField('address', maxlength=128),
-        meta.CharField('city', maxlength=64),
-        meta.PositiveIntegerField('zip'),
-        meta.EmailField('email'),
-        meta.PhoneNumberField('phone'),
-        meta.ForeignKey(School),
-        meta.ManyToManyField(WhenToHelp, radio_admin=True),
-    )
+    timestamp=meta.DateTimeField('date added', auto_now_add=1)
+    name=meta.CharField(maxlength=128)
+    address=meta.CharField(maxlength=128)
+    city=meta.CharField(maxlength=64)
+    zipcode=meta.PositiveIntegerField()
+    email=meta.EmailField()
+    phone=meta.PhoneNumberField()
+    school=meta.ForeignKey(School)
+    whentohelp=meta.ManyToManyField(WhenToHelp, radio_admin=True)
 
-    admin = meta.Admin(
-        list_display=('name', 'city', 'email', 'get_school',
-            'get_whentohelp_list', 'timestamp'),
-        )
+    class META:
+        admin = meta.Admin(
+            list_display=('name', 'city', 'email', 'school',
+                'get_whentohelp_list', 'timestamp'),
+            )
 
-    ordering = ['-timestamp']
+        ordering = ['-timestamp']
 
     def __repr__(self):
         return self.name + " of " + self.city
