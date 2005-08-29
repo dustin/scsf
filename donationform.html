@@ -54,9 +54,9 @@
 	</p>
 
 	<ul style="list-style: none;">
-	{% for choice in form.manipulator.prioritys.choices %}
+	{% for choice in form.manipulator.priorities.choices %}
 		<li>
-			<input type="checkbox" name="prioritys" value="{{ choice.0 }}"/>
+			<input type="checkbox" name="priorities" value="{{ choice.0 }}"/>
 			{{ choice.1 }}
 		</li>
 	{% endfor %}
