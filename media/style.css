@@ -111,6 +111,16 @@ a:hover {
 	margin-right: 1em;
 }
 
+#privacypolicy {
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 2em;
+	border: solid 1px #467;
+	background: #ddb;
+	font-size: smaller;
+	padding: 5px;
+}
+
 h1, h2, h3, h4 {
 	color: #467;
 }
