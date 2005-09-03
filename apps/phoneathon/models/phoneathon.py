@@ -27,7 +27,7 @@ class PhoneVolunteer(meta.Model):
     email=meta.EmailField()
     phone=meta.PhoneNumberField()
     school=meta.ForeignKey(School)
-    whentohelp=meta.ManyToManyField(WhenToHelp, radio_admin=True)
+    whentohelp=meta.ManyToManyField(WhenToHelp)
 
     class META:
         admin = meta.Admin(
