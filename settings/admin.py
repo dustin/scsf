@@ -2,6 +2,8 @@
 
 from main import *
 
+SITE_ID = 2
+
 TEMPLATE_DIRS = (
     '/data/web/django/templates/scsf-admin/',
     '/usr/local/lib/python2.4/site-packages/django-1.0.0-py2.4.egg/django/conf/admin_templates',
