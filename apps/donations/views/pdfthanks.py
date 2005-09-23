@@ -47,7 +47,8 @@ def hasThing(x):
 
 def go(filepath, parts):
     global IMG_PATH
-    doc=SimpleDocTemplate(filepath, leftMargin=1.5*inch, topMargin=1.75*inch)
+    doc=SimpleDocTemplate(filepath,
+        leftMargin=1.5*inch, topMargin=1.75*inch, pagesize=letter)
 
     styles=getStyles()
 
