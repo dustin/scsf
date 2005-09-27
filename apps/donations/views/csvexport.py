@@ -7,17 +7,29 @@ Copyright (c) 2005  Dustin Sallings <dustin@spy.net>
 import csv
 import time
 
-from django.models.donations import donations
+from django.models.donations import donations, prioritys
 from django.utils.httpwrappers import HttpResponse
 
 def __writeCsv(f):
-    cols=("ts", "name", "amt", "address1", "address2", "city", "zipcode",
-        "email", "phone")
+    dcols=["ts", "name", "amt", "address1", "address2", "city", "zipcode",
+        "email", "phone"]
+
+    # Get the list of priorities and their names in alphabetical order
+    pnames = [o.name for o in prioritys.get_list()]
+    pnames.sort()
 
     l = donations.get_list(completed__exact=True)
+
+    rows=[]
+    for d in l:
+        r=[getattr(d, c) for c in dcols]
+        myPNames = [o.name for o in d.get_priority_list()]
+        r.extend([(x in myPNames) for x in pnames])
+        rows.append(r)
+
     w=csv.writer(f)
-    w.writerow(cols)
-    w.writerows([[getattr(o, c) for c in cols] for o in l])
+    w.writerow(dcols + pnames)
+    w.writerows(rows)
 
 def getCsv(request):
     """Get a PDF of the given object."""
