@@ -32,8 +32,7 @@ def __writeCsv(f):
     w.writerows(rows)
 
 def getCsv(request):
-    """Get a PDF of the given object."""
-    pdfdata=None
+    """Get a CSV export of all of the completed donations."""
     res=HttpResponse('', "text/csv")
     fn="scsf-donation-export-%s.csv" % (time.strftime("%Y%m%d"),)
     res["Content-Disposition"]="attachment; filename=%s" % (fn,)
