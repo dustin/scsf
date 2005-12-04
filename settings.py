@@ -30,6 +30,8 @@ MEDIA_ROOT = ''
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     "django.middleware.cache.CacheMiddleware",
+    "django.middleware.sessions.SessionMiddleware",
+    "django.contrib.flatpages.middleware.FlatpageFallbackMiddleware",
 )
 
 # URL that handles the media served from MEDIA_ROOT.
@@ -39,7 +41,12 @@ MEDIA_URL = 'http://www.santaclaraschoolsfoundation.org/media/'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'hajepy*kz13&85(6_2=i8l%t&@)axx^)v&l^7ijm18v6%29a*#'
 
-ROOT_URLCONF = 'scsf.settings.urls.main'
+ROOT_URLCONF = 'scsf.urls'
+
+TEMPLATE_LOADERS = (
+    'django.core.template.loaders.filesystem.load_template_source',
+    'django.core.template.loaders.app_directories.load_template_source',
+)
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates".
@@ -55,4 +62,5 @@ INSTALLED_APPS = (
     'scsf.apps.volunteers',
     'scsf.apps.donations',
     'scsf.apps.phoneathon',
+    "django.contrib.flatpages",
 )
