@@ -28,7 +28,7 @@ class GrantRequest(meta.Model):
     class META:
         admin = meta.Admin(
             search_fields=('requestor_name', 'proposal'),
-            list_display=('req_date', 'requestor_name',
+            list_display=('id', 'req_date', 'requestor_name',
                 'amt_requested', 'amt_granted', 'accepted', 'school'),
             list_filter=('req_date', 'accepted'),
             fields=(
