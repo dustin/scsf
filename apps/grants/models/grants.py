@@ -33,7 +33,7 @@ class GrantRequest(meta.Model):
             list_filter=('req_date', 'accepted'),
             fields=(
                 ('Request Information',
-                    {'fields': ('requestor_name',
+                    {'fields': ('req_date', 'requestor_name',
                         'requestor_email', 'school', 'grade', 'subject',
                         'proposal', 'amt_requested', 'amt_raised',
                         'raise_description', 'benefits', 'principal_notified')
