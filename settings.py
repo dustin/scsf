@@ -71,6 +71,10 @@ TEMPLATE_DIRS = (
     '/data/web/django/templates/scsf/',
 )
 
+ALLOWED_INCLUDE_ROOTS = (
+    '/data/web/django/templates/scsf/',
+)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
