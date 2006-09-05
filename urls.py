@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import *
 from scsf.apps.volunteers.models import Volunteer
+from scsf.apps.grants.models import GrantRequest
 
 urlpatterns = patterns('',
     # Example:
@@ -18,4 +19,7 @@ urlpatterns = patterns('',
     (r'^volunteer/new/', 'django.views.generic.create_update.create_object',
         {'post_save_redirect':'/volunteer/saved/',
             'model': Volunteer}),
+    (r'^grant/new/', 'django.views.generic.create_update.create_object',
+        {'post_save_redirect':'/grant/saved/',
+            'model': GrantRequest}),
 )
