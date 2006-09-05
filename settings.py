@@ -9,6 +9,10 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+CACHE_BACKEND = 'memcached://purple:11211/'
+CACHE_MIDDLEWARE_SECONDS = 30
+CACHE_MIDDLEWARE_KEY_PREFIX = 'scsf'
+
 DATABASE_ENGINE = 'postgresql'           # 'postgresql', 'mysql', 'sqlite3' or 'ado_mssql'.
 DATABASE_NAME = 'scsf'             # Or path to database file if using sqlite3.
 DATABASE_USER = 'scsf2'             # Not used with sqlite3.
@@ -63,8 +67,7 @@ ROOT_URLCONF = 'scsf.urls'
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates".
     # Always use forward slashes, even on Windows.
-    '/data/web/django/templates/bracherpta/',
-    '/tmp/scsf/templates',
+    '/data/web/django/templates/scsf/',
 )
 
 INSTALLED_APPS = (
