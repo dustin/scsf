@@ -13,7 +13,14 @@ urlpatterns = patterns('',
     # The donation form
     (r'^programs/', 'scsf.apps.general.views.programs'),
 
-    # Uncomment this for admin:
+    # Special admin pages
+    (r'^admin/grant/list/$',
+        'scsf.apps.general.views.limited_object_list',
+        {'queryset': GrantRequest.objects.all().order_by('-req_date')}),
+    (r'^admin/grant/show/(?P<object_id>\d+)/$',
+        'scsf.apps.general.views.limited_object_detail',
+        {'queryset': GrantRequest.objects.all()}),
+
     (r'^admin/', include('django.contrib.admin.urls')),
 
     (r'^volunteer/new/', 'django.views.generic.create_update.create_object',
