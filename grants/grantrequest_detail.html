@@ -1,0 +1,66 @@
+{% extends "admin/base_site.html" %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" media="print"
+	href="{% load adminmedia %}{% admin_media_prefix %}css/print.css" />
+{% endblock %}
+
+{% block coltype %}colM{% endblock %}
+{% block bodyclass %}dashboard{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+
+{% block title %}
+	Grant Request #{{object.id}} from {{object.requestor_name}}
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+<h1>Grant Request #{{object.id}}</h1>
+
+<div id="summary">
+	<p>
+		This is a grant request from
+		<a href="mailto:{{object.requestor_email}}"
+			title="{{object.requestor_email}}">
+			{{object.requestor_name}}
+		</a>
+		at <a href="/admin/general/schools/{{object.get_school.id}}/"
+			title="{{object.get_school.phone}}">
+			{{object.get_school}}
+		</a>
+		which was requested on {{object.req_date|date:"l, F d Y"}}.
+	</p>
+
+	<p>
+		This request is for ${{object.amt_requested}} and is expected to
+		benefit approximately {{object.benefits}} students.
+	</p>
+
+	<p>
+		The principal of {{object.get_school}}
+		<strong>{{object.principal_notified|yesno:"has,has not,has not"}}</strong>
+		been notified.
+	</p>
+</div>
+
+<h2>Proposal</h2>
+<div id="proposal">
+	{{object.proposal|linebreaks}}
+</div>
+
+<h2>Current Efforts</h2>
+<div id="efforts">
+	<p>
+		Currently, ${{object.amt_raised}} has been raised independently to support
+		this project.
+		{% if object.raise_description %}
+			A description as to how this was done follows.
+		{% endif %}
+	</p>
+
+	{{object.raise_description|linebreaks}}
+</div>
+
+</div>
+{% endblock %}

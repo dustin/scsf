@@ -1,0 +1,57 @@
+{% extends "admin/base_site.html" %}
+
+{% block bodyclass %}dashboard{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+
+{% block title %}Pending Grants{% endblock %}
+
+{% block extrastyle %}
+<style type="text/css">
+/* All the list items on this page begin with images that will serve as
+ bullets. */
+
+li.unprocessed {
+	list-style-image: url(/media/img/admin/icon_addlink.gif);
+}
+li.accepted {
+	list-style-image: url(/media/img/admin/icon-yes.gif);
+}
+li.rejected {
+	list-style-image: url(/media/img/admin/icon-no.gif);
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+<h1>Pending Grants</h1>
+
+<p>
+	Please note that this list currently contains grants in all of the following
+	states:
+</p>
+
+<ul>
+	<li class="unprocessed">Unprocessed</li>
+	<li class="accepted">Accepted</li>
+	<li class="rejected">Rejected</li>
+</ul>
+
+<ul>
+	{% for g in object_list %}
+		<li class="{{g.accepted|yesno:"accepted,rejected,unprocessed"}}">
+			<a href="/admin/grant/show/{{g.id}}/">
+					#{{g.id}} - ${{g.amt_requested}}
+					for {{g.requestor_name}} from {{g.get_school}} on {{g.req_date}}
+			</a>
+			<a href="/admin/grants/grantrequests/{{g.id}}/">
+				<img src='/media/img/admin/icon_changelink.gif'
+					title="edit this" alt="edit"/>
+			</a>
+		</li>
+	{% endfor %}
+</ul>
+
+</div>
+{% endblock %}
