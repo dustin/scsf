@@ -41,7 +41,7 @@ li.rejected {
 <ul>
 	{% for g in object_list %}
 		<li class="{{g.accepted|yesno:"accepted,rejected,unprocessed"}}">
-			<a href="/admin/grant/show/{{g.id}}/">
+			<a href="/admin/grant/{{g.id}}/">
 					#{{g.id}} - ${{g.amt_requested}}
 					for {{g.requestor_name}} from {{g.get_school}} on {{g.req_date}}
 			</a>
