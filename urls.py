@@ -14,10 +14,10 @@ urlpatterns = patterns('',
     (r'^programs/', 'scsf.apps.general.views.programs'),
 
     # Special admin pages
-    (r'^admin/grant/list/$',
+    (r'^admin/grant/$',
         'scsf.apps.general.views.limited_object_list',
         {'queryset': GrantRequest.objects.all().order_by('-req_date')}),
-    (r'^admin/grant/show/(?P<object_id>\d+)/$',
+    (r'^admin/grant/(?P<object_id>\d+)/$',
         'scsf.apps.general.views.limited_object_detail',
         {'queryset': GrantRequest.objects.all()}),
 
