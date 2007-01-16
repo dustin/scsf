@@ -43,7 +43,7 @@ li.rejected {
 		<li class="{{g.accepted|yesno:"accepted,rejected,unprocessed"}}">
 			<a href="/admin/grant/{{g.id}}/">
 					#{{g.id}} - ${{g.amt_requested}}
-					for {{g.requestor_name}} from {{g.get_school}} on {{g.req_date}}
+					for {{g.requestor_name}} from {{g.school}} on {{g.req_date}}
 			</a>
 			<a href="/admin/grants/grantrequest/{{g.id}}/">
 				<img src='/media/img/admin/icon_changelink.gif'

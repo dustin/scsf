@@ -25,9 +25,9 @@
 			title="{{object.requestor_email}}">
 			{{object.requestor_name}}
 		</a>
-		at <a href="/admin/general/schools/{{object.get_school.id}}/"
-			title="{{object.get_school.phone}}">
-			{{object.get_school}}
+		at <a href="/admin/general/schools/{{object.school.id}}/"
+			title="{{object.school.phone}}">
+			{{object.school}}
 		</a>
 		which was requested on {{object.req_date|date:"l, F d Y"}}.
 	</p>
@@ -38,7 +38,7 @@
 	</p>
 
 	<p>
-		The principal of {{object.get_school}}
+		The principal of {{object.school}}
 		<strong>{{object.principal_notified|yesno:"has,has not,has not"}}</strong>
 		been notified.
 	</p>

@@ -20,7 +20,7 @@ Since 2004, the Foundation has given scholarships totaling $9,000.
 
 <ul>
 {% for s in scholarships %}
-	<li>{{ s.name }} from {{ s.get_school }} in {{ s.year }}</li>
+	<li>{{ s.name }} from {{ s.school }} in {{ s.year }}</li>
 {% endfor %}
 </ul>
 {% endif %}
