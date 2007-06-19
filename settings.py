@@ -17,7 +17,7 @@ DATABASE_ENGINE = 'postgresql'           # 'postgresql', 'mysql', 'sqlite3' or '
 DATABASE_NAME = 'scsf'             # Or path to database file if using sqlite3.
 DATABASE_USER = 'scsf2'             # Not used with sqlite3.
 DATABASE_PASSWORD = '1qUXpZlixwjx'         # Not used with sqlite3.
-DATABASE_HOST = 'db'             # Set to empty string for localhost. Not used with sqlite3.
+DATABASE_HOST = 'purple'             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
 # Local time zone for this installation. All choices can be found here:
