@@ -9,6 +9,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+GRANT_MAIL = ['noelani@spy.net', 'georgelaw@earthlink.net',
+    'nbrunyon@yahoo.com', 'keast_43@pacbell.net']
+
 CACHE_BACKEND = 'memcached://purple:11211/'
 CACHE_MIDDLEWARE_SECONDS = 30
 CACHE_MIDDLEWARE_KEY_PREFIX = 'scsf'
