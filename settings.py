@@ -1,10 +1,10 @@
 # Django settings for scsf project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Dustin Sallings', 'dustin@spy.net'),
 )
 
 MANAGERS = ADMINS
