@@ -37,8 +37,9 @@ class GrantRequest(models.Model):
             else:
                 pn="Principal was NOT notified"
 
-            mailbody = "School:  %s\nAmount:  %.2f\nAffects %d kids\n%s\n\n%s" \
-                % (self.school, self.amt_requested, self.benefits, pn,
+            mailbody = "School:  %s\nTeacher:  %s <%s>\nAmount:  %.2f\nAffects %d kids\n%s\n\n%s" \
+                % (self.school, self.requestor_name, self.requestor_email,
+                    self.amt_requested, self.benefits, pn,
                     self.proposal)
             send_mail('New Grant Request - ' + self.subject,
                 mailbody, 'noelani+grantrequest@spy.net',
