@@ -1,10 +1,10 @@
 #!/bin/sh
 
-chmod -R u+rwX,g+rX,o+rX code templates media
+chmod -R u+rwX,g+rX,o+rX code templates webroot
 
 rsync -vaSe ssh --delete code/ basket.west.spy.net:/data/web/django/scsf/
 rsync -vaSe ssh --delete \
 	templates/ basket.west.spy.net:/data/web/django/templates/scsf
 rsync -vaSe ssh --delete --exclude=stats/ \
-	media/ \
-	basket.west.spy.net:/data/web/purple-virts/www.scsf.org/media/
+	webroot/ \
+	basket.west.spy.net:/data/web/purple-virts/www.scsf.org/
