@@ -6,11 +6,6 @@ urlpatterns = patterns('',
     # Example:
     # (r'^scsf/', include('scsf.apps.foo.urls.foo')),
 
-    (r'^donate/', 'scsf.apps.donations.views.newform'),
-    # This is called when a donation is confirmed.
-    (r'^donated/(?P<donationId>\d+)/', 'scsf.apps.donations.views.confirm'),
-
-    # The donation form
     (r'^programs/', 'scsf.apps.general.views.programs'),
 
     # Special admin pages
