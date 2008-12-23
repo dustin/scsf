@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+  Copyright (c) 2005  Dustin Sallings <dustin+html@spy.net>
+  -->
+<html lang="en">
+	<head>
+		<title>
+			{% block fulltitle %}
+				Santa Clara Schools Foundation - {% block title%}{% endblock %}
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" type="text/css" title="Default"
+			href="/media/style.css" />
+		<link rel="stylesheet" type="text/css" media="print"
+			href="/media/print.css" />
+	</head>
+
+	<body>
+		<div id="pagetop">
+			<img id="lCornerLogo" alt="logo" src="/media/images/scsf-logo.png"/>
+			<div id="toptext">
+				Santa Clara Schools Foundation
+			</div>
+			<img id="rCornerLogo" alt="logo" src="/media/images/girls.jpg"/>
+		</div>
+		{% block navbar %}
+		<div id="navbar">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li>
+					<a href="/programs/">Programs</a>
+					<ul>
+						<li><a href="/programs/#grants">Grants</a></li>
+						<li><a href="/programs/#scholarships">Scholarships</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/funding/">Funding</a>
+					<ul>
+						<li><a href="http://www.musicrivals.org">Music Rivals</a></li>
+						<li><a href="/golf/">Golf Tournament</a></li>
+						<li><a href="http://www.santaclaraartandwine.com/">Santa Clara Art & Wine</a></li>
+					</ul>
+				</li>
+				<li><a href="/donate/">Donate</a></li>
+				<li><a href="/acknowledgments/">Sponsors</a></li>
+				<li><a href="/board/">Board of Directors</a></li>
+				<li><a href="/contact/">Contact Us</a></li>
+			</ul>
+		</div>
+		{% endblock %}
+
+		<div id="content">
+			{% block content %}{% endblock %}
+		</div>
+
+		<div id="footer">
+			900 Lafayette St. #504 - Santa Clara, CA 95050 - 408.243.6655
+			<hr style="width: 30px;"/>
+			Copyright &copy; 2005 Spy Internetworking and
+				Santa Clara Schools Foundation.
+		</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-679821-5";
+urchinTracker();
+</script>
+	</body>
+</html>

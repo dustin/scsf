@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block title %}Donate{% endblock %}
+{% block content %}
+
+<h1>Donate to the Foundation</h1>
+
+{% if form.has_errors %}
+<h2 class="error">Please correct the following error{{ errors|pluralize }}:</h2>
+<ul class="error">
+	{% for e in errors.items %}
+	<li>Field "{{ e.0 }}": {{ e.1|join:", " }}</li>
+	{% endfor %}
+</ul>
+{% endif %}
+
+<form method="post" action="/donate/">
+
+<fieldset class="aligned" id="donator">
+	<legend>Required Information</legend>
+
+	<!--
+	Errors:  {{errors}}
+	-->
+
+	<div>
+	<label for="id_name">Name</label>
+		{{ form.name }}
+		{% if form.name.errors %}
+			<span class="error">
+				*** {{ form.name.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_amt">Amount</label>
+		{{ form.amt }}
+		{% if form.amt.errors %}
+			<span class="error">
+				*** {{ form.amt.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+</fieldset>
+
+<fieldset class="aligned" id="survey">
+	<legend>Optional Survey</legend>
+
+	<p>
+		Your donation will be used where it is needed most, however we would like
+		to know areas that are particularly important to you.  Please check all
+		that apply.
+	</p>
+
+	<ul style="list-style: none;">
+	{% for choice in form.manipulator.priorities.choices %}
+		<li>
+			<input type="checkbox" name="priorities" value="{{ choice.0 }}"/>
+			{{ choice.1 }}
+		</li>
+	{% endfor %}
+	</ul>
+</fieldset>
+
+<fieldset class="aligned" id="optional">
+	<legend>Optional Information About You</legend>
+
+	<div>
+	<label for="id_email">Email Address</label>
+		{{ form.email }}
+		{% if form.email.errors %}
+			<span class="error">
+				*** {{ form.email.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_phone">Phone Number</label>
+		{{ form.phone }}
+		{% if form.phone.errors %}
+			<span class="error">
+				*** {{ form.phone.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_address1">Address</label>
+		{{ form.address1 }}
+		{% if form.address1.errors %}
+			<span class="error">
+				*** {{ form.address1.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_address2">Address (line 2)</label>
+		{{ form.address2 }}
+		{% if form.address2.errors %}
+			<span class="error">
+				*** {{ form.address2.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_city">City</label>
+		{{ form.city }}
+		{% if form.city.errors %}
+			<span class="error">
+				*** {{ form.city.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_zipcode">Zip Code</label>
+		{{ form.zipcode }}
+		{% if form.zipcode.errors %}
+			<span class="error">
+				*** {{ form.zipcode.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_info">Anything Else We Should Know?</label>
+		{{ form.info }}
+		{% if form.info.errors %}
+			<span class="error">
+				*** {{ form.info.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+</fieldset>
+
+<p>
+Please read our <span id="policylink">privacy policy</span>
+before submitting information.
+</p>
+
+{% ssi /data/web/django/templates/scsf/policy.html %}
+
+<div>
+	<input type="submit" value="Next"/>
+</div>
+
+</form>
+
+{% endblock %}

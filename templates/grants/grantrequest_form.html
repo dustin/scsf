@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block title %}Request Grant{% endblock %}
+{% block content %}
+
+<h1>Request a Grant</h1>
+
+{% if form.has_errors %}
+<h2 class="error">Please correct the following error{{ errors|pluralize }}:</h2>
+<ul class="error">
+	{% for e in errors.items %}
+	<li>Field "{{ e.0 }}": {{ e.1|join:", " }}</li>
+	{% endfor %}
+</ul>
+{% endif %}
+
+<form method="post" action="/grant/new/">
+
+<fieldset class="aligned" id="requestor">
+	<legend>Requestor Info</legend>
+
+	<!--
+	Errors:  {{errors}}
+	-->
+
+	<div>
+	<label for="id_requestor_name">Your Name</label>
+		{{ form.requestor_name }}
+		{% if form.requestor_name.errors %}
+			<span class="error">
+				*** {{ form.requestor_name.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_requestor_email">Your Email Address</label>
+		{{ form.requestor_email }}
+		{% if form.requestor_email.errors %}
+			<span class="error">
+				*** {{ form.requestor_email.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_school">Your School</label>
+		{{ form.school }}
+		{% if form.school.errors %}
+			<span class="error">
+				*** {{ form.school.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_grade">Grade</label>
+		{{ form.grade }}
+		{% if form.grade.errors %}
+			<span class="error">
+				*** {{ form.grade.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_subject">Subject</label>
+		{{ form.subject }}
+		{% if form.subject.errors %}
+			<span class="error">
+				*** {{ form.subject.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+</fieldset>
+
+<fieldset class="aligned" id="request">
+	<legend>Request Info</legend>
+
+	<div>
+	<label for="id_proposal">Your proposal</label>
+		{{ form.proposal }}
+		{% if form.proposal.errors %}
+			<span class="error">
+				*** {{ form.proposal.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_amt_requested">Amount Requested</label>
+		{{ form.amt_requested }}
+		{% if form.amt_requested.errors %}
+			<span class="error">
+				*** {{ form.amt_requested.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_benefits">Children Affected</label>
+		{{ form.benefits }}
+		{% if form.benefits.errors %}
+			<span class="error">
+				*** {{ form.benefits.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_principal_notified">Was the Principal Notified?</label>
+		{{ form.principal_notified }}
+		{% if form.principal_notified.errors %}
+			<span class="error">
+				*** {{ form.principal_notified.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+</fieldset>
+
+<fieldset class="aligned" id="raised">
+	<legend>Raised Elsewhere (if applicable)</legend>
+	
+	<div>
+	<label for="id_amt_raised">Amount Raised</label>
+		{{ form.amt_raised }}
+		{% if form.amt_raised.errors %}
+			<span class="error">
+				*** {{ form.amt_raised.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_raise_description">How Was This Raised?</label>
+		{{ form.raise_description }}
+		{% if form.raise_description.errors %}
+			<span class="error">
+				*** {{ form.raise_description.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<!-- house keeping -->
+	<input type="hidden" name="accepted" value="1"/>
+
+</fieldset>
+
+<p>
+Please read our <span id="policylink">privacy policy</span>
+before submitting information.
+</p>
+
+{% ssi /data/web/django/templates/scsf/policy.html %}
+
+<div>
+	<input type="submit" value="Request"/>
+</div>
+
+</form>
+
+{% endblock %}

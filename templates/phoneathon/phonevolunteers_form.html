@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block title %}Phone-A-Thon Volunteer{% endblock %}
+{% block content %}
+
+<h1>Volunteer for our Phone-A-Thon</h1>
+
+{% if form.has_errors %}
+<h2 class="error">Your form contained errors.  Please correct them below.</h2>
+{% endif %}
+
+<form method="post" action="/phoneathon/new/">
+
+<fieldset class="aligned" id="requestor">
+	<legend>Volunteer Info</legend>
+
+	<!--
+	Errors:  {{errors}}
+	-->
+
+	<div>
+	<label for="id_name">Name</label>
+		{{ form.name }}
+		{% if form.name.errors %}
+			<span class="error">
+				*** {{ form.name.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_email">Email Address</label>
+		{{ form.email }}
+		{% if form.email.errors %}
+			<span class="error">
+				*** {{ form.email.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_phone">Phone Number</label>
+		{{ form.phone }}
+		{% if form.phone.errors %}
+			<span class="error">
+				*** {{ form.phone.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_address">Address</label>
+		{{ form.address }}
+		{% if form.address.errors %}
+			<span class="error">
+				*** {{ form.address.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_city">City</label>
+		{{ form.city }}
+		{% if form.city.errors %}
+			<span class="error">
+				*** {{ form.city.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+	<label for="id_zipcode">Zip Code</label>
+		{{ form.zipcode }}
+		{% if form.zipcode.errors %}
+			<span class="error">
+				*** {{ form.zipcode.errors|join:", " }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div>
+		<label for="id_school">Your School</label>
+			{{ form.school }}
+				{% if form.schoolid.errors %}
+					<span class="error">
+					*** {{ form.school.errors|join:", " }}
+				</span>
+			{% endif %}
+	</div>
+
+
+</fieldset>
+
+<fieldset class="aligned" id="availibility">
+	<legend>Availability</legend>
+
+
+	<label for="whentohelp">When Can You Help?
+		{% if form.whentohelp.errors %}
+			<br/><span class="error">Please select at least one time slot.</span>
+		{% endif %}
+	</label>
+
+	<ul style="list-style: none;" id="whentohelp">
+		{% for choice in form.manipulator.whentohelp.choices %}
+			<li>
+				<input type="checkbox" name="whentohelp" value="{{ choice.0 }}"/>
+				{{ choice.1 }}
+			</li>
+		{% endfor %}
+	</ul>
+
+</fieldset>
+
+<p>
+Please read our <span id="policylink">privacy policy</span>
+before submitting information.
+</p>
+
+{% ssi /data/web/django/templates/scsf/policy.html %}
+
+<div>
+	<input type="submit" value="Volunteer"/>
+</div>
+
+</form>
+
+{% endblock %}
