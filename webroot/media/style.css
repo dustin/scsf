@@ -1,0 +1,202 @@
+body {
+	font-family: "Verdana", "Times New Roman", "Times", serif;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #467;
+	padding-right: 2px;
+	/*
+	border-bottom: dotted 1px blue;
+	border-right: dotted 1px blue;
+	*/
+	border-bottom: solid 1px;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #79a;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #467;
+	background: #ddb;
+}
+
+#pagetop {
+	height: 105px;
+	border-bottom: 2px solid #467;
+	background: #ddb;
+	color: #467;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#toptext {
+	margin-left: 200px;
+	margin-right: 200px;
+	font-size: x-large;
+	font-weight: bolder;
+	text-align: center;
+	position: relative;
+	top: 1em;
+}
+
+#lCornerLogo {
+	float: left;
+	top: 0px;
+	/* A little padding here since that image has text all the way against the
+	   left */
+	left: 2px;
+	position: absolute;
+}
+
+#rCornerLogo {
+	float: right;
+	top: 0px;
+	right: 0;
+	position: absolute;
+}
+
+#navbar {
+	color: #467;
+	background: #ddb;
+	width: 150px;
+	float: left;
+	font-size: smaller;
+	border-right: solid 1px;
+	border-bottom: solid 1px;
+}
+
+#navbar a {
+	background: #ddb;
+	color: #467;
+	border: none;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#navbar a:visited {
+	font-weight: normal;
+}
+
+#navbar a:hover {
+	text-decoration: underline;
+}
+
+#navbar ul {
+	padding: 0;
+	margin: 2px;
+	list-style: none;
+}
+
+#navbar ul ul {
+	margin: 0 1em;
+	font-size: smaller;
+}
+
+#navbar li {
+	margin: 0 0 1em 0;
+}
+
+#navbar ul > li > ul > li {
+	margin-bottom: 0;
+}
+
+#content {
+	margin-left: 160px;
+	margin-right: 1em;
+}
+
+#privacypolicy {
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 2em;
+	border: solid 1px #467;
+	background: #ddb;
+	font-size: smaller;
+	padding: 5px;
+}
+
+h1, h2, h3, h4 {
+	color: #467;
+}
+
+h1 {
+	font-size: x-large;
+}
+
+h2 {
+	font-size: large;
+}
+
+#content ul {
+	font-size: smaller;
+	list-style-image: url(/media/images/applenb.png);
+}
+
+#content dl, ol {
+	font-size: smaller;
+}
+
+#footer {
+	clear: both;
+	margin-top: 1em;
+	padding-top: 2px;
+	font-size: xx-small;
+	border-style: solid none none none;
+	border-width: 1px;
+	width: 100%;
+	text-align: center;
+}
+
+dt {
+	font-weight: bold;
+}
+
+fieldset legend {
+	border: solid 1px #467;
+	background: #ddb;
+	color: #467;
+}
+
+fieldset {
+	border: solid 1px #467;
+}
+
+input, select, textarea {
+	color: #467;
+}
+
+label {
+	font-weight: bolder;
+	font-size: smaller;
+	color: #467;
+}
+
+fieldset.aligned {
+	margin-bottom: 1em;
+}
+
+fieldset.aligned div {
+	margin-bottom: 1em;
+}
+
+fieldset.aligned label {
+	float: left;
+	width: 200px;
+	text-align: right;
+	padding-right: 1em;
+}
+
+fieldset.aligned ul {
+	margin-left: 220px;
+	padding: 0;
+}
+
+.error {
+	color: red;
+}
