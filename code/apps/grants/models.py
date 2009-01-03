@@ -18,13 +18,13 @@ class GrantRequest(models.Model):
     # Number of children that will be benefitted
     benefits=models.PositiveIntegerField()
     principal_notified=models.BooleanField()
-    amt_requested=models.FloatField(max_digits=7, decimal_places=2)
-    amt_raised=models.FloatField(max_digits=7, decimal_places=2,
+    amt_requested=models.DecimalField(max_digits=7, decimal_places=2)
+    amt_raised=models.DecimalField(max_digits=7, decimal_places=2,
         blank=True, null=True)
     raise_description=models.TextField(blank=True, null=True)
     # Null means not processed
     accepted=models.NullBooleanField()
-    amt_granted=models.FloatField(max_digits=7, decimal_places=2,
+    amt_granted=models.DecimalField(max_digits=7, decimal_places=2,
         blank=True, null=True)
     note=models.TextField(blank=True, null=True)
 
