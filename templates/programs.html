@@ -4,124 +4,50 @@ c{% extends "base.html" %}
 {% block content %}
 <a name="scholarships"></a>
 <h1>Graduating High School Student Scholarship Programs</h1>
-<h2>The Santa Clara Schools Foundation sponsors two separate scholarship programs annually. The High School Senior Scholarship Program and the SCSF Citizenship Award Program are detailed below.</h2>
-<p>High School Senior Scholarship Program
+<p>The Santa Clara Schools Foundation sponsors two separate scholarship programs annually. The High School Senior Scholarship Program and the SCSF Citizenship Award Program are detailed below.
+</p>
+<h2>High School Senior Scholarship Program </h2>
+<p>
 Two (2) Scholarships of $1500 each may be awarded to qualified and selected applicants from each of the SCUSD High Schools - New Valley, Santa Clara, Wilcox and Wilson High School.
 Qualifications:
     •    All graduating Santa Clara Unified School District students with a minimum GPA of 3.0 are eligible to apply
     •    Student must apply directly using the following application link:
     •    Application must be postmarked by May 4, 2009
+</p>
+<h2>
 SCSF Citizenship Award Program
-Up to two (2) $500 Awards may be given to each SCUSD High School to recognize students who have shown excellent leadership, inåvolvement or other characteristics while in school. A Teacher, Administrator or Parent Group Officer must nominate students.
+</h2>
+<p>
+Up to two (2) $500 Awards may be given to each SCUSD High School to recognize students who have shown excellent leadership, involvement or other characteristics while in school. A Teacher, Administrator or Parent Group Officer must nominate students.
 Qualifications:
     •    Graduating Santa Clara Unified School District student must be nominated by a Teacher, Administrator, or Parent Group Officer.
     •    SCSF Citizenship Award Nomination Form link:
     •    Application must be postmarked by May 4, 2009
-How to Apply
-    •    Students: Complete High School Senior Scholarship Program Application - LINK
-    •    Administrators/Teachers/Parent Group Officers nominate a student: Complete SCSF Citizenship Award Nomination Form
 </p>
-<a href="/media/SCSFscholapps.pdf">Scholarship Application Form</a>
-<h2>Qualifications</h2>
-<p>
-Scholarship applicants must be a Santa Clara Unified School District graduating student with a GPA of 3.0 of higher. <b>(Student must apply)</b>
-</p>
-<h2> 
-Scholarships
-</h2>
-<p>
-Two (2) scholarships of $1500 each will be awarded to qualified and selected applicants from each of the SCUSD High Schools - New Valley High School, Santa Clara High School, Wilcox High School and Wilson High School. 
-</p>
-<h2>Procedure</h2>
-<p>
-All decisions are at the complete discretion of the Santa Clara Schools Foundation Scholarship Award Committee.
-Recipients will be notified by mail.
-Awards may be claimed by the recipient following submission of proof of full time enrollment at a qualified educational institution by 10/31/2009.
-</p>
+<h2>How To Apply</h2>
+<ul>
+<li>   •    Students: Complete High School Senior Scholarship Program Application -<a href="/media/scholarship.pdf">Scholarship Application Form</a></li>
+<li>   •    Administrators/Teachers/Parent Group Officers nominate a student: Complete SCSF Citizenship Award Nomination Form – <a href="/media/merit.pdf">Merit Application Form</a></li>
+</ul>
 <h2>Application Deadline</h2>
 <p>
 Applications must be postmarked by May 4, 2009.
-Send Completed Application materials to:
+</p>
+<h2>Send Completed Aplication Materials To:</h2>
+<p>
 Scholarship Award Committee
 Santa Clara Schools Foundation
 900 Lafayette St. #504
 Santa Clara, CA 95050
 </p>
-<h2>How to Apply</h2>
-<ul>
-<li>Students: Complete <a href="/media/scholarship.pdf">Scholarship Application Form</a></li>
-<li>Administators/Teachers/Officers: Complete <a href="/media/merit.pdf">Merit Application Form</a></li>
-</ul>
-<blockquote>
-<p>
-Scholarship Committee <br/>
-Santa Clara Schools Foundation <br/>
-900 Lafayette St. #504 <br/>
-Santa Clara, CA 95050
+
+<h2>Procedure</h2>
+<p>All decisions are at the complete discretion of the Santa Clara Schools Foundation Scholarship Award Committee.
+Recipients will be notified by mail.
+Awards may be claimed by the recipient following submission of proof of full time enrollment at a qualified educational institution by 10/31/2009.
 </p>
+
+<h2>For further information contact: </h2>
 <p>
-For further information contact:
 John George, SCSF President at 243-6655
 </p>
-</blockquote> 
-
-<p>
-Since 2004, the Foundation has given scholarships totaling $22,500.
-</p>
-
-{% if scholarships %}
-<h2>Congratulations to Past Winners</h2>
-
-<ul>
-{% for s in scholarships %}
-	<li>{{ s.name }} from {{ s.school }} in {{ s.year }}</li>
-{% endfor %}
-</ul>
-{% endif %}
-<a name="grants"></a>
-<h1>Grant Program</h1>
-
-<p>
-The Santa Clara Schools Foundation makes grants to
-<acronym title="Santa Clara Unified School District">SCUSD</acronym> district
-classroom teachers for learning materials, equipment, programs and activities
-that directly benefit our students.
-</p>
-<p>
-Our goal is to provide assistance to programs that encourage quality academic
-performance, give students hands-on experiences, and promote their interest in
-learning.
-</p>
-
-<p>
-Grants are made available through a selective applications process.  After a
-grant proposal has been received, the grant award decision is made by the Santa
-Clara Schools Foundation Board of Directors.
-</p>
-
-<h2>Grant Policy and Award Policy </h2>
-<p>
-The Foundation encourages grant requests from all schools and a broad range of staff so that awards may be distributed as equitably as possible throughout the district.  The Grant submission deadline is the end of the month prior to regular monthly Board meetings.  Application at least 60 days in advance of the month of need is recommended to assure timely consideration.  You can either <a href="/contact/">send in</a>
-a grant request using our <a href="/media/grant.pdf">offline form</a> or or use
-our <a href="/grant/new/">online form</a> to apply right now.
-</p>
-
-<p>
-Grant request must meet the requirements stipulated on the Application and include principal signature indicating awareness of the request. Application should include description of efforts to obtain funding or support from other sources. Instructional materials requested should meet district academic standards and not displace district-provided or district recommended materials.
-</p>
-<p>
-Support for field trips and science camp will be awarded based on need (i.e., funding for students unable to afford cost).
-Applicant requesting technology should first determine if the request can be met through donations solicited from local companies by district or school (technology donations contact is Roger Barnes).
-</p>
-<p>
-In making grant decisions, the Board may consider the extent to which a school or individual staff member has previously received Foundation support. Grants will not be made for foreign travel, stipends, or salaries.
-</p>
-<h1>Request a Grant</h1>
-<p>
-To request a grant, please proceed to the <a href="/grant/new/">grant request
-form</a> or use the <a href="/media/grant.pdf">offline form</a>.
-</p>
-
-
-
-{% endblock %}
