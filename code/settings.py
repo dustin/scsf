@@ -1,6 +1,6 @@
 # Django settings for scsf project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -86,8 +86,4 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.admin',
     'scsf.apps.general',
-    'scsf.apps.grants',
-    'scsf.apps.scholarships',
-    'scsf.apps.volunteers',
-    'scsf.apps.phoneathon',
 )
